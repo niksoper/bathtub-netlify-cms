@@ -8,11 +8,7 @@ export const IndexPageTemplate = ({
   image,
   title,
   heading,
-  subheading,
-  mainpitch,
   description,
-  intro,
-  main,
 }) => (
     <div>
         <div
@@ -75,12 +71,7 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
 }
 
 const IndexPage = ({ data }) => {
@@ -124,26 +115,7 @@ query IndexPageTemplate {
           }
         }
         heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
         description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
       }
     }
   }
