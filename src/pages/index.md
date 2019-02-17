@@ -1,7 +1,7 @@
 ---
 templateKey: 'index-page'
 title: 'Great coffee with a conscience'
-image: /img/home-jumbotron.jpg
+image: /img/2019-dec-performance-front-LO-RES.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
 description: >-
