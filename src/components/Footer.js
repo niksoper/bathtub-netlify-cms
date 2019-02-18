@@ -3,6 +3,8 @@ import { Link } from 'gatsby'
 
 import facebook from '../img/social/facebook.svg'
 
+import { IconCredit } from '../components/IconCredit'
+
 const Footer = class extends React.Component {
   render() {
     return (
@@ -45,6 +47,9 @@ const Footer = class extends React.Component {
                       style={{ width: '1em', height: '1em' }}
                     />
                   </a>
+                </div>
+                <div className="column is-4">
+                  <IconCredit />
                 </div>
               </div>
             </div>
