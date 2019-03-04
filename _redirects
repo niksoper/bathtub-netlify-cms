@@ -1,2 +1,2 @@
 # Redirect domain aliases to primary domain
-https://www.bathtuborchestra.co.uk/* https://www.bathtuborchestra.com/:splat 301!
+http://www.bathtuborchestra.co.uk/* https://www.bathtuborchestra.com/:splat 301!
