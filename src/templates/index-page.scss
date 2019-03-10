@@ -1,0 +1,15 @@
+@import '../components/all';
+
+.jumbotron {
+  display: flex;
+  justify-content: center;
+
+  img {
+    @include mobile {
+      max-height: 80vw;
+    }
+    @include tablet {
+      max-height: 400px;
+    }
+  }
+}
