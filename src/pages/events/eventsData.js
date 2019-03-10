@@ -1,3 +1,5 @@
+import moment from 'moment'
+
 export const events = [
   {
     name: 'Rehearsal break',
@@ -180,3 +182,5 @@ export const events = [
     category: 'break',
   },
 ]
+
+export const futureEvents = events.filter(event => moment(event.date).isAfter(moment()))

@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import moment from 'moment'
 
 import Layout from '../../components/Layout'
-import { events } from './eventsData.js'
+import { futureEvents } from './eventsData.js'
 
 import './events.scss'
 
@@ -16,7 +16,7 @@ export default class Index extends React.Component {
             <div className="content">
               <h1>Events</h1>
               <div>
-                {events.map(event => (
+                {futureEvents.map(event => (
                   <Event event={event} />
                 ))}
               </div>
