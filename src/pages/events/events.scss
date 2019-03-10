@@ -1,0 +1,49 @@
+.event {
+  display: flex;
+  flex-direction: row;
+
+  padding: 15px 0;
+  max-width: 400px;
+  margin: 0 auto;
+
+  .event-date {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+
+    flex-direction: column;
+    .weekday {
+      color: #999;
+      text-transform: uppercase;
+    }
+  }
+
+  .event-body {
+    margin-top: 5px;
+    margin-left: 10px;
+    padding: 10px 15px;
+
+    border-radius: 5px;
+    width: 100%;
+
+    background-color: #ccc;
+
+    &.rehearsal {
+      background-color: #efd343;
+    }
+    &.gig {
+      background-color: #5e41f3;
+      color: #fff;
+    }
+
+    .event-title {
+      margin: 0;
+      font-weight: 500;
+      font-size: 1.5em;
+    }
+
+    .event-time {
+      font-size: 0.7em;
+    }
+  }
+}
