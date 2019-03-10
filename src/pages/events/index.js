@@ -3,7 +3,6 @@ import classNames from 'classnames'
 import moment from 'moment'
 
 import Layout from '../../components/Layout'
-import { futureEvents } from './eventsData.js'
 
 import './events.scss'
 
@@ -63,3 +62,188 @@ const EventBody = ({ title, location, start, end, category }) => {
     </div>
   )
 }
+
+const events = [
+  {
+    name: 'Rehearsal break',
+    date: '2019-03-12',
+    category: 'break',
+  },
+  {
+    name: 'Rehearsal',
+    location: 'Salvation Army',
+    date: '2019-03-19',
+    start: '19:30',
+    end: '21:30',
+    category: 'rehearsal',
+  },
+  {
+    name: 'Rehearsal',
+    location: 'Salvation Army',
+    date: '2019-03-26',
+    start: '19:30',
+    end: '21:30',
+    category: 'rehearsal',
+  },
+  {
+    name: 'Open Mic',
+    location: "St Michael's",
+    date: '2019-03-29',
+    start: '19:00',
+    end: '22:00',
+    category: 'gig',
+  },
+  {
+    name: 'Rehearsal',
+    location: 'Salvation Army',
+    date: '2019-04-02',
+    start: '19:30',
+    end: '21:30',
+    category: 'rehearsal',
+  },
+  {
+    name: 'Rehearsal',
+    location: 'Salvation Army',
+    date: '2019-04-09',
+    start: '19:30',
+    end: '21:30',
+    category: 'rehearsal',
+  },
+  {
+    name: 'Rehearsal break',
+    date: '2019-04-16',
+    category: 'break',
+  },
+  {
+    name: 'Rehearsal',
+    location: 'Salvation Army',
+    date: '2019-04-23',
+    start: '19:30',
+    end: '21:30',
+    category: 'rehearsal',
+  },
+  {
+    name: 'Rehearsal',
+    location: 'Salvation Army',
+    date: '2019-04-30',
+    start: '19:30',
+    end: '21:30',
+    category: 'rehearsal',
+  },
+  {
+    name: 'Rehearsal',
+    location: 'Salvation Army',
+    date: '2019-05-07',
+    start: '19:30',
+    end: '21:30',
+    category: 'rehearsal',
+  },
+  {
+    name: 'Rehearsal',
+    location: 'Salvation Army',
+    date: '2019-05-14',
+    start: '19:30',
+    end: '21:30',
+    category: 'rehearsal',
+  },
+  {
+    name: 'Party in the city',
+    location: 'Salvation Army',
+    date: '2019-05-17',
+    start: '18:45',
+    end: '19:15',
+    category: 'gig',
+  },
+  {
+    name: 'Rehearsal',
+    location: 'Salvation Army',
+    date: '2019-05-21',
+    start: '19:30',
+    end: '21:30',
+    category: 'rehearsal',
+  },
+  {
+    name: 'Rehearsal break',
+    date: '2019-05-28',
+    category: 'break',
+  },
+  {
+    name: 'Rehearsal',
+    location: 'Salvation Army',
+    date: '2019-06-04',
+    start: '19:30',
+    end: '21:30',
+    category: 'rehearsal',
+  },
+  {
+    name: 'Bath Fringe Festival',
+    location: "St Michael's",
+    date: '2019-06-09',
+    start: '19:30',
+    end: '21:30',
+    category: 'gig',
+  },
+  {
+    name: 'Rehearsal',
+    location: 'Salvation Army',
+    date: '2019-06-11',
+    start: '19:30',
+    end: '21:30',
+    category: 'rehearsal',
+  },
+  {
+    name: 'Rehearsal',
+    location: 'Salvation Army',
+    date: '2019-06-18',
+    start: '19:30',
+    end: '21:30',
+    category: 'rehearsal',
+  },
+  {
+    name: 'Rehearsal',
+    location: 'Salvation Army',
+    date: '2019-06-25',
+    start: '19:30',
+    end: '21:30',
+    category: 'rehearsal',
+  },
+  {
+    name: 'Rehearsal',
+    location: 'Salvation Army',
+    date: '2019-07-02',
+    start: '19:30',
+    end: '21:30',
+    category: 'rehearsal',
+  },
+  {
+    name: 'Rehearsal',
+    location: 'Salvation Army',
+    date: '2019-07-09',
+    start: '19:30',
+    end: '21:30',
+    category: 'rehearsal',
+  },
+  {
+    name: 'Rehearsal',
+    location: 'Salvation Army',
+    date: '2019-07-16',
+    start: '19:30',
+    end: '21:30',
+    category: 'rehearsal',
+  },
+  {
+    name: 'Rehearsal',
+    location: 'Salvation Army',
+    date: '2019-07-23',
+    start: '19:30',
+    end: '21:30',
+    category: 'rehearsal',
+  },
+  {
+    name: 'Rehearsal break',
+    date: '2019-07-30',
+    category: 'break',
+  },
+]
+
+const futureEvents = events.filter(event => moment(event.date).isAfter(moment()))
