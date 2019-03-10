@@ -57,8 +57,8 @@ const EventBody = ({ title, location, start, end, category }) => {
     <div className={eventClass}>
       <div className="event-title">{title}</div>
       <div>
-        <div className="event-time">{`${start} - ${end}`}</div>
-        <p>{location}</p>
+        {start && end && <div className="event-time">{`${start} - ${end}`}</div>}
+        {location && <p>{location}</p>}
       </div>
     </div>
   )
