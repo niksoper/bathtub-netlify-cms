@@ -4,6 +4,10 @@
   display: flex;
   justify-content: center;
 
+  .logo-wrap {
+    padding: 0 10px;
+  }
+
   img {
     @include mobile {
       max-height: 80vw;
