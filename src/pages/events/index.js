@@ -71,7 +71,6 @@ const events = [
   },
   {
     name: 'Rehearsal',
-    location: 'Salvation Army',
     date: '2019-03-19',
     start: '19:30',
     end: '21:30',
@@ -79,7 +78,6 @@ const events = [
   },
   {
     name: 'Rehearsal',
-    location: 'Salvation Army',
     date: '2019-03-26',
     start: '19:30',
     end: '21:30',
@@ -87,7 +85,7 @@ const events = [
   },
   {
     name: 'Open Mic',
-    location: "St Michael's",
+    location: "St Michael's, Broad St, Bath BA1 5LJ",
     date: '2019-03-29',
     start: '19:00',
     end: '22:00',
@@ -95,7 +93,6 @@ const events = [
   },
   {
     name: 'Rehearsal',
-    location: 'Salvation Army',
     date: '2019-04-02',
     start: '19:30',
     end: '21:30',
@@ -103,7 +100,6 @@ const events = [
   },
   {
     name: 'Rehearsal',
-    location: 'Salvation Army',
     date: '2019-04-09',
     start: '19:30',
     end: '21:30',
@@ -116,7 +112,6 @@ const events = [
   },
   {
     name: 'Rehearsal',
-    location: 'Salvation Army',
     date: '2019-04-23',
     start: '19:30',
     end: '21:30',
@@ -124,7 +119,6 @@ const events = [
   },
   {
     name: 'Rehearsal',
-    location: 'Salvation Army',
     date: '2019-04-30',
     start: '19:30',
     end: '21:30',
@@ -132,7 +126,6 @@ const events = [
   },
   {
     name: 'Rehearsal',
-    location: 'Salvation Army',
     date: '2019-05-07',
     start: '19:30',
     end: '21:30',
@@ -140,7 +133,6 @@ const events = [
   },
   {
     name: 'Rehearsal',
-    location: 'Salvation Army',
     date: '2019-05-14',
     start: '19:30',
     end: '21:30',
@@ -148,7 +140,7 @@ const events = [
   },
   {
     name: 'Party in the city',
-    location: 'Salvation Army',
+    location: 'Nexus, Nelson Place, Bath BA1 5DA',
     date: '2019-05-17',
     start: '18:45',
     end: '19:15',
@@ -156,7 +148,6 @@ const events = [
   },
   {
     name: 'Rehearsal',
-    location: 'Salvation Army',
     date: '2019-05-21',
     start: '19:30',
     end: '21:30',
@@ -169,7 +160,6 @@ const events = [
   },
   {
     name: 'Rehearsal',
-    location: 'Salvation Army',
     date: '2019-06-04',
     start: '19:30',
     end: '21:30',
@@ -177,7 +167,7 @@ const events = [
   },
   {
     name: 'Bath Fringe Festival',
-    location: "St Michael's",
+    location: "St Michael's, Broad St, Bath BA1 5LJ",
     date: '2019-06-09',
     start: '19:30',
     end: '21:30',
@@ -185,7 +175,6 @@ const events = [
   },
   {
     name: 'Rehearsal',
-    location: 'Salvation Army',
     date: '2019-06-11',
     start: '19:30',
     end: '21:30',
@@ -193,7 +182,6 @@ const events = [
   },
   {
     name: 'Rehearsal',
-    location: 'Salvation Army',
     date: '2019-06-18',
     start: '19:30',
     end: '21:30',
@@ -201,7 +189,6 @@ const events = [
   },
   {
     name: 'Rehearsal',
-    location: 'Salvation Army',
     date: '2019-06-25',
     start: '19:30',
     end: '21:30',
@@ -209,7 +196,6 @@ const events = [
   },
   {
     name: 'Rehearsal',
-    location: 'Salvation Army',
     date: '2019-07-02',
     start: '19:30',
     end: '21:30',
@@ -217,7 +203,6 @@ const events = [
   },
   {
     name: 'Rehearsal',
-    location: 'Salvation Army',
     date: '2019-07-09',
     start: '19:30',
     end: '21:30',
@@ -225,7 +210,6 @@ const events = [
   },
   {
     name: 'Rehearsal',
-    location: 'Salvation Army',
     date: '2019-07-16',
     start: '19:30',
     end: '21:30',
@@ -233,7 +217,6 @@ const events = [
   },
   {
     name: 'Rehearsal',
-    location: 'Salvation Army',
     date: '2019-07-23',
     start: '19:30',
     end: '21:30',
