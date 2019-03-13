@@ -1,3 +1,12 @@
+@mixin colored-border($bg-color) {
+  $border-color: darken(
+    $color: $bg-color,
+    $amount: 10%,
+  );
+  background-color: $bg-color;
+  border: 3px solid $border-color;
+}
+
 .event {
   display: flex;
   flex-direction: row;
@@ -26,13 +35,13 @@
     border-radius: 5px;
     width: 100%;
 
-    background-color: #ccc;
+    @include colored-border(#ccc);
 
     &.rehearsal {
-      background-color: #efd343;
+      @include colored-border(#efd343);
     }
     &.gig {
-      background-color: #5e41f3;
+      @include colored-border(#5e41f3);
       color: #fff;
     }
 
