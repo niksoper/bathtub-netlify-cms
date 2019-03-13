@@ -1,6 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import moment from 'moment'
+import { v4 } from 'uuid'
 
 import Layout from '../../components/Layout'
 
@@ -16,7 +17,7 @@ export default class Index extends React.Component {
               <h1>Events</h1>
               <div>
                 {futureEvents.map(event => (
-                  <Event event={event} />
+                  <Event key={event.id} event={event} />
                 ))}
               </div>
             </div>
@@ -229,4 +230,4 @@ const events = [
   },
 ]
 
-const futureEvents = events.filter(event => moment(event.date).isAfter(moment()))
+const futureEvents = events.map(event => ({ id: v4(), ...event })).filter(event => moment(event.date).isAfter(moment()))

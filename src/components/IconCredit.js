@@ -16,7 +16,7 @@ export function IconCredit() {
     <div className="icon-credit">
       Icons made by
       {authors.map(a => (
-        <ExternalLink href={a.url} title={a.name}>
+        <ExternalLink key={a.name} href={a.url} title={a.name}>
           {a.name}
         </ExternalLink>
       ))}
