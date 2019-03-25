@@ -4,16 +4,13 @@ import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
-
-import './index-page.scss'
+import { Jumbotron } from '../components/Jumbotron'
 
 export const IndexPageTemplate = ({ image, title, heading, description }) => (
   <div>
-    <div className="jumbotron">
-      <div className="logo-wrap">
-        <img alt="BathTub Orchestra logo" src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image} />
-      </div>
-    </div>
+    <Jumbotron>
+      <img alt="BathTub Orchestra logo" src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image} />
+    </Jumbotron>
     <section className="section section--gradient">
       <div className="container">
         <div className="columns">
