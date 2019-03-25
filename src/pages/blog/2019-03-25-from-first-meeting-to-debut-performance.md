@@ -7,8 +7,6 @@ description: >-
   of strangers to a fully fledged performing orchestra - that's just 6 weeks'
   practice!
 ---
-
-
 ![BathTub orchestra performance from the audience](/img/2019-dec-performance-front-LO-RES.jpg "Audience view")
 
 ## The first rehearsal...
@@ -40,8 +38,8 @@ But we pulled it off :-)
 We all really enjoyed the experience of our first gig as an orchestra. Our set was three pieces:
 
 * Happy (Pharrell Williams)
-* Cars (Gary Numan)
 * Naima (John Coltrane)
+* Cars (Gary Numan)
 
 And we got an encore!
 
