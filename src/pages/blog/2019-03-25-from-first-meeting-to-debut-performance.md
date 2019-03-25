@@ -6,6 +6,8 @@ description: >-
   From 23rd October 2018 to 30th November 2018, we made the journey from a group
   of strangers to a fully fledged performing orchestra - that's just 6 weeks'
   practice!
+tags:
+  - performance
 ---
 ![BathTub orchestra performance from the audience](/img/2019-dec-performance-front-LO-RES.jpg "Audience view")
 
