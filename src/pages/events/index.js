@@ -1,13 +1,24 @@
 import React from 'react'
 import classNames from 'classnames'
 import moment from 'moment'
-import { v4 } from 'uuid'
+import { v4 as uuid } from 'uuid'
 
 import Layout from '../../components/Layout'
+
+import allEvents from '../../data/events/events.json'
 
 import './events.scss'
 
 export default class Index extends React.Component {
+  constructor(props) {
+    super(props)
+
+    const yesterday = moment().subtract(1, 'day')
+
+    this.state = {
+      events: allEvents.map(event => ({ ...event, id: uuid() })).filter(event => moment(event.date).isAfter(yesterday)),
+    }
+  }
   render() {
     return (
       <Layout>
@@ -16,7 +27,7 @@ export default class Index extends React.Component {
             <div className="content">
               <h1>Events</h1>
               <div>
-                {futureEvents.map(event => (
+                {this.state.events.map(event => (
                   <Event key={event.id} event={event} />
                 ))}
               </div>
@@ -64,170 +75,20 @@ const EventBody = ({ title, location, start, end, category }) => {
   )
 }
 
-const events = [
-  {
-    name: 'Rehearsal break',
-    date: '2019-03-12',
-    category: 'break',
-  },
-  {
-    name: 'Rehearsal',
-    date: '2019-03-19',
-    start: '19:30',
-    end: '21:30',
-    category: 'rehearsal',
-  },
-  {
-    name: 'Rehearsal',
-    date: '2019-03-26',
-    start: '19:30',
-    end: '21:30',
-    category: 'rehearsal',
-  },
-  {
-    name: 'Open Mic',
-    location: "St Michael's, Broad St, Bath BA1 5LJ",
-    date: '2019-03-29',
-    start: '19:00',
-    end: '22:00',
-    category: 'gig',
-  },
-  {
-    name: 'Rehearsal',
-    date: '2019-04-02',
-    start: '19:30',
-    end: '21:30',
-    category: 'rehearsal',
-  },
-  {
-    name: 'Rehearsal',
-    date: '2019-04-09',
-    start: '19:30',
-    end: '21:30',
-    category: 'rehearsal',
-  },
-  {
-    name: 'Rehearsal break',
-    date: '2019-04-16',
-    category: 'break',
-  },
-  {
-    name: 'Rehearsal',
-    date: '2019-04-23',
-    start: '19:30',
-    end: '21:30',
-    category: 'rehearsal',
-  },
-  {
-    name: 'Rehearsal',
-    date: '2019-04-30',
-    start: '19:30',
-    end: '21:30',
-    category: 'rehearsal',
-  },
-  {
-    name: 'Rehearsal',
-    date: '2019-05-07',
-    start: '19:30',
-    end: '21:30',
-    category: 'rehearsal',
-  },
-  {
-    name: 'Rehearsal',
-    date: '2019-05-14',
-    start: '19:30',
-    end: '21:30',
-    category: 'rehearsal',
-  },
-  {
-    name: 'Party in the city',
-    location: 'Nexus, Nelson Place, Bath BA1 5DA',
-    date: '2019-05-17',
-    start: '18:45',
-    end: '19:15',
-    category: 'gig',
-  },
-  {
-    name: 'Rehearsal',
-    date: '2019-05-21',
-    start: '19:30',
-    end: '21:30',
-    category: 'rehearsal',
-  },
-  {
-    name: 'Rehearsal break',
-    date: '2019-05-28',
-    category: 'break',
-  },
-  {
-    name: 'Rehearsal',
-    date: '2019-06-04',
-    start: '19:30',
-    end: '21:30',
-    category: 'rehearsal',
-  },
-  {
-    name: 'Bath Fringe Festival',
-    location: "St Michael's, Broad St, Bath BA1 5LJ",
-    date: '2019-06-09',
-    start: '19:30',
-    end: '21:30',
-    category: 'gig',
-  },
-  {
-    name: 'Rehearsal',
-    date: '2019-06-11',
-    start: '19:30',
-    end: '21:30',
-    category: 'rehearsal',
-  },
-  {
-    name: 'Rehearsal',
-    date: '2019-06-18',
-    start: '19:30',
-    end: '21:30',
-    category: 'rehearsal',
-  },
-  {
-    name: 'Rehearsal',
-    date: '2019-06-25',
-    start: '19:30',
-    end: '21:30',
-    category: 'rehearsal',
-  },
-  {
-    name: 'Rehearsal',
-    date: '2019-07-02',
-    start: '19:30',
-    end: '21:30',
-    category: 'rehearsal',
-  },
-  {
-    name: 'Rehearsal',
-    date: '2019-07-09',
-    start: '19:30',
-    end: '21:30',
-    category: 'rehearsal',
-  },
-  {
-    name: 'Rehearsal',
-    date: '2019-07-16',
-    start: '19:30',
-    end: '21:30',
-    category: 'rehearsal',
-  },
-  {
-    name: 'Rehearsal',
-    date: '2019-07-23',
-    start: '19:30',
-    end: '21:30',
-    category: 'rehearsal',
-  },
-  {
-    name: 'Rehearsal break',
-    date: '2019-07-30',
-    category: 'break',
-  },
-]
-
-const futureEvents = events.map(event => ({ id: v4(), ...event })).filter(event => moment(event.date).isAfter(moment()))
+// export const pageQuery = graphql`
+//   query EventsPageTemplate {
+//     allEventsJson {
+//       edges {
+//         node {
+//           id
+//           name
+//           date
+//           start
+//           end
+//           category
+//           location
+//         }
+//       }
+//     }
+//   }
+// `

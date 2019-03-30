@@ -1,12 +1,18 @@
 module.exports = {
   siteMetadata: {
     title: 'BathTub Orchestra',
-    description:
-      "BathTub Orchestra - Bath's newest community orchestra",
+    description: "BathTub Orchestra - Bath's newest community orchestra",
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    'gatsby-transformer-json',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: './src/data/',
+      },
+    },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
@@ -66,9 +72,9 @@ module.exports = {
       },
     },
     {
-      resolve:'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
+      resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
-        develop: true,            // Activates purging in npm run develop
+        develop: true, // Activates purging in npm run develop
         purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
       },
     }, // must be after other CSS plugins
