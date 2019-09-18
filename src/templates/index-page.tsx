@@ -1,15 +1,22 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import { Jumbotron } from '../components/Jumbotron'
+import { IPage, FrontmatterImage } from '../typings/markdown'
+import { SharpImage } from '../components/SharpImage'
 
-export const IndexPageTemplate = ({ image, title, heading, description }) => (
+export interface IndexPageTemplateProps {
+  image: FrontmatterImage
+  heading: string
+  description: string
+}
+
+export const IndexPageTemplate = ({ image, heading, description }: IndexPageTemplateProps) => (
   <div>
     <Jumbotron>
-      <img alt="BathTub Orchestra logo" src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image} />
+      <SharpImage alt="BathTub Orchestra logo" image={image} />
     </Jumbotron>
     <section className="section section--gradient">
       <div className="container">
@@ -39,37 +46,18 @@ export const IndexPageTemplate = ({ image, title, heading, description }) => (
   </div>
 )
 
-IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  description: PropTypes.string,
-}
-
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data }: IPage<IndexPageTemplateProps>) => {
   const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
-        title={frontmatter.title}
         heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
-        intro={frontmatter.intro}
       />
     </Layout>
   )
-}
-
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
 }
 
 export default IndexPage

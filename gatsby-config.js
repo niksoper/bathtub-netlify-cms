@@ -8,6 +8,13 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-transformer-json',
     {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true,
+        allExtensions: true,
+      },
+    },
+    {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
