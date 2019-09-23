@@ -8,7 +8,7 @@
     "@types/react-helmet": "^5.0.10",
     "bulma": "^0.7.0",
     "classnames": "^2.2.6",
-    "gatsby": "^2.0.66",
+    "gatsby": "^2.9.2",
     "gatsby-image": "^2.0.23",
     "gatsby-plugin-netlify": "^2.0.6",
     "gatsby-plugin-netlify-cms": "^3.0.9",
@@ -16,7 +16,7 @@
     "gatsby-plugin-react-helmet": "^3.0.4",
     "gatsby-plugin-sass": "^2.0.7",
     "gatsby-plugin-sharp": "^2.0.15",
-    "gatsby-plugin-typescript": "^2.1.8",
+    "gatsby-plugin-ts": "^2.0.1",
     "gatsby-remark-copy-linked-files": "^2.0.7",
     "gatsby-remark-images": "^3.0.1",
     "gatsby-remark-relative-images": "^0.2.1",
@@ -34,6 +34,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
+    "typescript": "^3.6.3",
     "uuid": "^3.2.1"
   },
   "keywords": [

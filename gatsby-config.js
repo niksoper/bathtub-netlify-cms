@@ -8,10 +8,19 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-transformer-json',
     {
-      resolve: `gatsby-plugin-typescript`,
+      resolve: `gatsby-plugin-ts`,
       options: {
-        isTSX: true,
-        allExtensions: true,
+        typeCheck: false, //process.env.NODE_ENV !== 'production',
+        tsLoader: {
+          logLevel: 'warn',
+        },
+        forkTsCheckerPlugin: {
+          eslint: true,
+        },
+        fileName: `types/graphql-types.d.ts`,
+        codegen: true,
+        codegenDelay: 250,
+        alwaysCheck: false,
       },
     },
     {
