@@ -7,7 +7,7 @@ import Footer from './Footer'
 
 import './all.sass'
 
-const TemplateWrapper: React.SFC<{}> = ({ children }) => (
+const Layout: React.SFC<{}> = ({ children }) => (
   <StaticQuery
     query={graphql`
       query HeadingQuery {
@@ -46,4 +46,4 @@ const TemplateWrapper: React.SFC<{}> = ({ children }) => (
   />
 )
 
-export default TemplateWrapper
+export default Layout

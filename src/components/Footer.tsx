@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 
 import facebook from '../img/social/facebook.svg'
 import twitter from '../img/social/twitter.svg'
@@ -56,15 +56,3 @@ const Footer: React.SFC<{}> = () => (
 )
 
 export default Footer
-
-export const query = graphql`
-  query {
-    fileName: file(relativePath: { eq: "src/img/social/twitter.svg" }) {
-      childImageSharp {
-        fluid(maxWidth: 400, maxHeight: 250) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`

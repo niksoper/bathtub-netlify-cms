@@ -1,7 +1,7 @@
 import React from 'react'
 
 export interface ExternalLinkProps {
-  title: string
+  title?: string
   href: string
   className?: string
 }
