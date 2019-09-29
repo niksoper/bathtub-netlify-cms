@@ -1,22 +1,16 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import { Jumbotron } from '../components/Jumbotron'
-import { IPage, FrontmatterImage } from '../typings/markdown'
-import { SharpImage } from '../components/SharpImage'
+import { IndexPageTemplateQuery } from '../../types/graphql-types'
 
-export interface IndexPageTemplateProps {
-  image: FrontmatterImage
-  heading: string
-  description: string
-}
-
-export const IndexPageTemplate = ({ image, heading, description }: IndexPageTemplateProps) => (
+export const IndexPageTemplate = ({ image, heading, description }: IndexPageTemplateQuery['markdownRemark']['frontmatter']) => (
   <div>
     <Jumbotron>
-      <SharpImage alt="BathTub Orchestra logo" image={image} />
+      <img alt="BathTub Orchestra logo" src={image.childImageSharp.fluid.src} />
     </Jumbotron>
     <section className="section section--gradient">
       <div className="container">
@@ -46,7 +40,11 @@ export const IndexPageTemplate = ({ image, heading, description }: IndexPageTemp
   </div>
 )
 
-const IndexPage = ({ data }: IPage<IndexPageTemplateProps>) => {
+interface IndexPageProps {
+  data: IndexPageTemplateQuery
+}
+
+const IndexPage = ({ data }: IndexPageProps) => {
   const { frontmatter } = data.markdownRemark
 
   return (

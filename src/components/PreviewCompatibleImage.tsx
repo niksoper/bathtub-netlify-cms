@@ -1,8 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
+import { ImageSharp } from '../../types/graphql-types'
 
-const PreviewCompatibleImage = ({ imageInfo }) => {
+export interface ImageInfo {
+  alt?: string
+  image?: { childImageSharp?: ImageSharp }
+  childImageSharp?: ImageSharp
+}
+
+export interface PreviewCompatibleImageProps {
+  imageInfo: ImageInfo
+}
+
+const PreviewCompatibleImage: React.SFC<PreviewCompatibleImageProps> = ({ imageInfo }) => {
   const imageStyle = { borderRadius: '5px' }
   const { alt = '', childImageSharp, image } = imageInfo
 

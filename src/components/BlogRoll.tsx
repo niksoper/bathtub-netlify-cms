@@ -1,8 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import { BlogRollQueryQuery } from '../../types/graphql-types'
 
-class BlogRoll extends React.Component {
+
+
+class BlogRoll extends React.Component<{ data: BlogRollQueryQuery}> {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
@@ -12,36 +14,28 @@ class BlogRoll extends React.Component {
         {posts &&
           posts.map(({ node: post }) => (
             <div className="is-parent column is-6" key={post.id}>
-              <article class="tile is-child box notification">
-                <p>
+              <article className="tile is-child box notification">
+                <div>
                   <Link className="title has-text-primary is-size-4" to={post.fields.slug}>
                     {post.frontmatter.title}
                   </Link>
                   <span> &bull; </span>
-                  <p className="subtitle is-size-5">{post.frontmatter.date}</p>
-                </p>
-                <p>
+                  <h1 className="is-size-5">{post.frontmatter.date}</h1>
+                </div>
+                <div>
                   {post.excerpt}
                   <br />
                   <br />
                   <Link className="button" to={post.fields.slug}>
                     Keep Reading →
                   </Link>
-                </p>
+                </div>
               </article>
             </div>
           ))}
       </div>
     )
   }
-}
-
-BlogRoll.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
 }
 
 export default () => (
@@ -69,6 +63,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={data => <BlogRoll data={data} />}
   />
 )

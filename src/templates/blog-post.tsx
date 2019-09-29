@@ -4,11 +4,11 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import { IPage } from '../typings/markdown'
+import { BlogPostByIdQuery } from '../../types/graphql-types'
 
 export interface BlogPostTemplateProps {
   content: any
-  contentComponent: any
+  contentComponent?: any
   description: string
   tags: string[]
   title: string
@@ -53,7 +53,11 @@ export const BlogPostTemplate = ({
   )
 }
 
-const BlogPost = ({ data }: IPage<BlogPostTemplateProps>) => {
+interface BlogPostProps {
+  data: BlogPostByIdQuery
+}
+
+const BlogPost = ({ data }: BlogPostProps) => {
   const { markdownRemark: post } = data
 
   return (

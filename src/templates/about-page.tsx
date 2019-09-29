@@ -1,9 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import { IPage } from '../typings/markdown'
+import { AboutPageQuery } from '../../types/graphql-types'
 
 interface AboutPageTemplateProps {
   title: string
@@ -30,7 +29,11 @@ export const AboutPageTemplate = ({ title, content, contentComponent }: AboutPag
   )
 }
 
-const AboutPage = ({ data }: IPage<AboutPageTemplateProps>) => {
+interface AboutPageProps {
+  data: AboutPageQuery
+}
+
+const AboutPage = ({ data }: AboutPageProps) => {
   const { markdownRemark: post } = data
 
   return (
