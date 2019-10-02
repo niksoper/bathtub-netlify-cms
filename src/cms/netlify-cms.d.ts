@@ -1,6 +1,4 @@
-declare module 'netlify-cms' {
-  export function registerPreviewTemplate(name: string, component: any): void
-  
+declare module 'netlify-cms' {  
   export interface CmsEntry {
     getIn<T>(path: string[]): T
   }
