@@ -18,9 +18,8 @@ module.exports = {
           eslint: true,
         },
         fileName: `types/graphql-types.d.ts`,
-        codegen: true,
+        codegen: false,
         codegenDelay: 250,
-        alwaysCheck: false,
       },
     },
     {
