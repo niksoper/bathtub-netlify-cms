@@ -56,7 +56,7 @@ export default () => (
     query={graphql`
       query MusiciansQuery {
         allMarkdownRemark(
-          sort: {fields: [frontmatter___instrument, frontmatter___name]},
+          sort: {fields: [frontmatter___name, frontmatter___instrument]},
           filter: { frontmatter: { templateKey: { eq: "musician" } } }
         ) {
           edges {
