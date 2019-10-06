@@ -23,17 +23,6 @@ const Footer: React.SFC<{}> = () => (
               </ul>
             </section>
           </div>
-          <div className="column is-6">
-            <section>
-              <ul className="menu-list">
-                <li>
-                  <ExternalLink className="navbar-item" href="/admin/">
-                    Admin
-                  </ExternalLink>
-                </li>
-              </ul>
-            </section>
-          </div>
         </div>
         <div className="columns">
           <div className="column is-12 social">
