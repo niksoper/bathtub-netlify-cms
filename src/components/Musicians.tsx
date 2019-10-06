@@ -1,28 +1,7 @@
 import React from 'react'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import { MusiciansQueryQuery } from '../../types/graphql-types'
-import { MusicianTemplateProps, MusicianImage } from '../templates/musician'
-
-import './Musicians.scss'
-import { HTMLContent } from './Content'
-
-interface MusicianPreviewProps extends MusicianTemplateProps {
-  slug: string
-}
-
-const MusicianPreview: React.SFC<MusicianPreviewProps> = ({ name, instrument, bio, image, slug }) => (
-  <div className="musician box notification">
-    <h1>{`${name}: ${instrument}`}</h1>
-    <div className="info">
-      <div className="photo">
-        <MusicianImage name={name} image={image} />
-      </div>
-      <blockquote>
-        <HTMLContent className="bio" content={bio} />
-      </blockquote>
-    </div>
-  </div>
-)
+import { Musician } from './Musician'
 
 class Musicians extends React.Component<{ data: MusiciansQueryQuery}> {
   render() {
@@ -35,9 +14,8 @@ class Musicians extends React.Component<{ data: MusiciansQueryQuery}> {
           musicians.map(({ node }) => {
             const {name, instrument, image, } = node.frontmatter
             return (
-              <MusicianPreview
+              <Musician
                 key={node.id}
-                slug={node.fields.slug}
                 name={name}
                 instrument={instrument}
                 bio={node.html}

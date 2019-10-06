@@ -3,50 +3,39 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { MusicianByIdQuery } from '../../types/graphql-types'
+import { MusicianProps, Musician } from '../components/Musician'
 
-export interface MusicianTemplateProps {
-  name: string
-  instrument: string
-  bio: string
-  image: any
+export interface MusicianTemplateProps extends MusicianProps {
   helmet?: any
 }
 
-export const MusicianImage: React.SFC<{ image: any, name: string }> = ({name, image}) => {
-  return image
-    ? <img alt={`Photo of ${name}`} src={image.childImageSharp.fluid.src} />
-    : null
-}
-
-export const MusicianTemplate = ({
+export const MusicianTemplate: React.SFC<MusicianTemplateProps> = ({
+  helmet,
   name,
   instrument,
   bio,
-  image,
-  helmet,
-}: MusicianTemplateProps) => {
+  image
+}) => {
   return (
     <section className="section">
       {helmet || ''}
       <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">{name}</h1>
-            <h2>{instrument}</h2>
-            <MusicianImage name={name} image={image} />
-            <p>{bio}</p>
-          </div>
-        </div>
+        <Musician
+          name={name}
+          instrument={instrument}
+          bio={bio}
+          image={image}  
+        />
       </div>
     </section>
   )
 }
 
-interface MusicianProps {
+interface MusicianPageProps {
   data: MusicianByIdQuery
 }
 
-const Musician = ({ data }: MusicianProps) => {
+const MusicianPage = ({ data }: MusicianPageProps) => {
   const { markdownRemark: musician } = data
 
   return (
@@ -61,13 +50,13 @@ const Musician = ({ data }: MusicianProps) => {
         name={musician.frontmatter.name}
         instrument={musician.frontmatter.instrument}
         image={musician.frontmatter.image}
-        bio={musician}
+        bio={musician.html}
       />
     </Layout>
   )
 }
 
-export default Musician
+export default MusicianPage
 
 export const pageQuery = graphql`
   query MusicianByID($id: String!) {
@@ -80,8 +69,8 @@ export const pageQuery = graphql`
         instrument
         image {
           childImageSharp {
-            fixed(width: 100, height:100, quality: 100) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 300, quality: 100) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
