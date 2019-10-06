@@ -17,7 +17,9 @@ const MusicianPreview: React.SFC<MusicianPreviewProps> = ({ name, instrument, bi
       <div className="photo">
         <MusicianImage name={name} image={image} />
       </div>
-      <HTMLContent className="bio" content={bio} />
+      <blockquote>
+        <HTMLContent className="bio" content={bio} />
+      </blockquote>
     </div>
   </div>
 )

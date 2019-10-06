@@ -15,7 +15,7 @@ export interface MusicianTemplateProps {
 export const MusicianImage: React.SFC<{ image: any, name: string }> = ({name, image}) => {
   return image
     ? <img alt={`Photo of ${name}`} src={image.childImageSharp.fluid.src} />
-    : <div>No image</div>
+    : null
 }
 
 export const MusicianTemplate = ({
