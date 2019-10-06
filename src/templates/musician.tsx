@@ -12,9 +12,11 @@ export interface MusicianTemplateProps {
   helmet?: any
 }
 
-export const MusicianImage: React.SFC<{ image: any, name: string }> = ({name, image}) => (
-  <img alt={`Photo of ${name}`} src={image.childImageSharp.fixed.src} />
-)
+export const MusicianImage: React.SFC<{ image: any, name: string }> = ({name, image}) => {
+  return image
+    ? <img alt={`Photo of ${name}`} src={image.childImageSharp.fluid.src} />
+    : <div>No image</div>
+}
 
 export const MusicianTemplate = ({
   name,
@@ -59,7 +61,7 @@ const Musician = ({ data }: MusicianProps) => {
         name={musician.frontmatter.name}
         instrument={musician.frontmatter.instrument}
         image={musician.frontmatter.image}
-        bio={musician.frontmatter.bio}
+        bio={musician}
       />
     </Layout>
   )
@@ -76,7 +78,6 @@ export const pageQuery = graphql`
         name
         templateKey
         instrument
-        bio
         image {
           childImageSharp {
             fixed(width: 100, height:100, quality: 100) {

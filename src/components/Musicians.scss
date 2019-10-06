@@ -1,0 +1,30 @@
+@import './all';
+
+.musicians {
+  .musician {
+    display: flex;
+    flex-direction: column;
+  
+    h1 {
+      font-size: 1.5em;
+      color: grey-text;
+    }
+  
+    .info {
+      display: flex;
+    }
+  
+    .photo {
+      flex-shrink: 0;
+      width: 300px;
+    }
+  
+    .bio {
+      margin-left: 1em;
+  
+      color: $grey-text;
+      font-style: italic;
+    }
+  }
+}
+

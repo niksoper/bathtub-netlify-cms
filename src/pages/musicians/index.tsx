@@ -11,8 +11,9 @@ export default class PeopleIndexPage extends React.Component {
           <div className="container">
             <div className="content">
               <h1>Our musicians</h1>
+              <p>Of course, without musicians there is no music - meet some of our members:</p>
+              <Musicians />
             </div>
-            <Musicians />
           </div>
         </section>
       </Layout>
