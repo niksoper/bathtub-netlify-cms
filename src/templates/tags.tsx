@@ -2,8 +2,14 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import { TagPageQuery } from '../../types/graphql-types'
 
-class TagRoute extends React.Component {
+export interface TagProps {
+  data: TagPageQuery,
+  pageContext: { tag: string }
+}
+
+class TagRoute extends React.Component<TagProps> {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
     const postLinks = posts.map(post => (

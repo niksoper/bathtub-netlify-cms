@@ -1,10 +1,16 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import { AboutPageQuery } from '../../types/graphql-types'
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+interface AboutPageTemplateProps {
+  title: string
+  content: any
+  contentComponent?: any
+}
+
+export const AboutPageTemplate = ({ title, content, contentComponent }: AboutPageTemplateProps) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -13,9 +19,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
+              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">{title}</h2>
               <PageContent className="content" content={content} />
             </div>
           </div>
@@ -25,30 +29,19 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   )
 }
 
-AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
+interface AboutPageProps {
+  data: AboutPageQuery
 }
 
-const AboutPage = ({ data }) => {
+const AboutPage = ({ data }: AboutPageProps) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
-      />
+      <AboutPageTemplate contentComponent={HTMLContent} title={post.frontmatter.title} content={post.html} />
     </Layout>
   )
 }
-
-AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
-}
-
 export default AboutPage
 
 export const aboutPageQuery = graphql`

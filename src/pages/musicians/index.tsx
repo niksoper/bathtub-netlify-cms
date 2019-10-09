@@ -1,19 +1,19 @@
 import React from 'react'
 
 import Layout from '../../components/Layout'
-import BlogRoll from '../../components/BlogRoll'
-import { Jumbotron } from '../../components/Jumbotron'
+import Musicians from '../../components/Musicians'
 
-export default class BlogIndexPage extends React.Component {
+export default class PeopleIndexPage extends React.Component {
   render() {
     return (
       <Layout>
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>BathTub Blog</h1>
+              <h1>Our musicians</h1>
+              <p>Of course, without musicians there is no music - meet some of our members:</p>
+              <Musicians />
             </div>
-            <BlogRoll />
           </div>
         </section>
       </Layout>

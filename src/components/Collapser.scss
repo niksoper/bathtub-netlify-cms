@@ -1,0 +1,17 @@
+@import './all';
+
+.collapser {
+  position: relative;
+  overflow: hidden;
+
+  .more {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    button {
+      padding: 0.5em;
+      font-size: 1.5rem;
+    }
+  }
+}

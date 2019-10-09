@@ -1,0 +1,31 @@
+@import './all';
+
+.musician {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 1.5em;
+    color: grey-text;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .photo {
+    flex-shrink: 0;
+    max-width: 300px;
+    margin: 1em;
+  }
+
+  blockquote {
+    padding: 0 0 0 1em;
+    border-left: 5px solid orange;
+    overflow: hidden;
+
+    color: $grey-text;
+    font-style: italic;
+  }
+}

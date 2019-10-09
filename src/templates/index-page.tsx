@@ -1,15 +1,16 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import { Jumbotron } from '../components/Jumbotron'
+import { IndexPageTemplateQuery } from '../../types/graphql-types'
 
-export const IndexPageTemplate = ({ image, title, heading, description }) => (
+export const IndexPageTemplate = ({ image, heading, description }: IndexPageTemplateQuery['markdownRemark']['frontmatter']) => (
   <div>
     <Jumbotron>
-      <img alt="BathTub Orchestra logo" src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image} />
+      <img alt="BathTub Orchestra logo" src={image.childImageSharp.fluid.src} />
     </Jumbotron>
     <section className="section section--gradient">
       <div className="container">
@@ -39,37 +40,22 @@ export const IndexPageTemplate = ({ image, title, heading, description }) => (
   </div>
 )
 
-IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  description: PropTypes.string,
+interface IndexPageProps {
+  data: IndexPageTemplateQuery
 }
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data }: IndexPageProps) => {
   const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
-        title={frontmatter.title}
         heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
-        intro={frontmatter.intro}
       />
     </Layout>
   )
-}
-
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
 }
 
 export default IndexPage

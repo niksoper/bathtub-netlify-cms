@@ -8,6 +8,21 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-transformer-json',
     {
+      resolve: `gatsby-plugin-ts`,
+      options: {
+        typeCheck: false, //process.env.NODE_ENV !== 'production',
+        tsLoader: {
+          logLevel: 'warn',
+        },
+        forkTsCheckerPlugin: {
+          eslint: true,
+        },
+        fileName: `types/graphql-types.d.ts`,
+        codegen: false,
+        codegenDelay: 250,
+      },
+    },
+    {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -57,12 +72,6 @@ module.exports = {
             },
           },
         ],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
     {

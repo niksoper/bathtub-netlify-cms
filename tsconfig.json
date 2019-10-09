@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "target": "es2015" /* or at least ES2015 */,
+    "module": "es2015" /* or at least ES2015 */,
+    "lib": ["es2015", "dom"] /* <-- required! */,
+    "jsx": "preserve" /* <-- required! */,
+    "moduleResolution": "node" /* <-- required! */,
+
+    /* for mixed ts/js codebase */
+    "allowJs": true,
+
+    "outDir": "./build" /* this won't be used by ts-loader */
+  }
+}
