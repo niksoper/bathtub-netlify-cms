@@ -1,17 +1,22 @@
 @import './all';
 
 .collapser {
-  position: relative;
-  overflow: hidden;
 
+  .collapsable {
+    overflow: hidden;
+  }
+   
   .more {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-
-    button {
-      padding: 0.5em;
-      font-size: 1.5rem;
+    
+    .toggle {
+      width: 100%;
+      font-size: 1rem;
+      padding: 1em 0.5em;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      text-align: right;
+      background-color: whitesmoke;
     }
   }
 }

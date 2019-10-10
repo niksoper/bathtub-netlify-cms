@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Collapser from './Collapser'
 import { HTMLContent } from './Content'
 import { MusicianImage } from './MusicianImage'
 
@@ -19,9 +20,11 @@ export const Musician: React.SFC<MusicianProps> = ({ name, instrument, bio, imag
       <div className="photo">
         <MusicianImage name={name} image={image} />
       </div>
-      <blockquote>
-        <HTMLContent className="bio" content={bio} />
-      </blockquote>
+      <Collapser>
+        <blockquote>
+          <HTMLContent className="bio" content={bio} />
+        </blockquote>
+      </Collapser>
     </div>
   </div>
 )
