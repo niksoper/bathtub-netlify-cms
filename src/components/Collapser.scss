@@ -1,17 +1,42 @@
 @import './all';
 
 .collapser {
-  position: relative;
-  overflow: hidden;
 
-  .more {
+  .collapsable {
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+
+  .fadefoot {
     position: absolute;
-    right: 0;
     bottom: 0;
+    left: 5px;
+    right: 0;
+    background: linear-gradient(to top, whitesmoke, rgba(red(whitesmoke), green(whitesmoke), blue(whitesmoke), 0.5));
+  }
 
-    button {
-      padding: 0.5em;
-      font-size: 1.5rem;
+  &.expanded {
+    .collapsable {
+      overflow: scroll;
+    }
+
+    .hide-expanded {
+      display: none;
+    }
+  }
+   
+  .more {
+
+    .toggle {
+      width: 100%;
+      font-size: 1rem;
+      padding: 1em 0.5em;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      text-align: right;
+      background-color: whitesmoke;
     }
   }
 }
