@@ -20,7 +20,7 @@ export const Musician: React.SFC<MusicianProps> = ({ name, instrument, bio, imag
       <div className="photo">
         <MusicianImage name={name} image={image} />
       </div>
-      <Collapser>
+      <Collapser maxHeightCollapsed={50}>
         <blockquote>
           <HTMLContent className="bio" content={bio} />
         </blockquote>
