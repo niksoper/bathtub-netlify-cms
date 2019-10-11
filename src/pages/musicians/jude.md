@@ -1,8 +1,8 @@
 ---
 templateKey: 'musician'
-name: 'Judy'
+name: 'Jude'
 instrument: soprano saxophone
-image: /img/musician-judy.jpg
+image: /img/musician-jude.jpg
 ---
 I played the piano and oboe at school but then, work and children came along and the music petered out, somehow there never seemed enough time.
 
