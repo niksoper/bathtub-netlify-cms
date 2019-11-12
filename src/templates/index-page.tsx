@@ -25,6 +25,17 @@ export const IndexPageTemplate = ({ image, heading, description }: IndexPageTemp
               </div>
             </div>
             <div className="column is-12">
+              <h3>Come to our Christmas concert!</h3>
+              <p>
+                A christmas concert featuring traditional carols, modern classics and a few surprises!
+                BathTub Orchestra will be joined by special guests - Priordonnas - a ladies choir formed
+                at Paragon school in Bath.
+              </p>
+              <Link className="navbar-item" to="/tickets">
+                Tickets
+              </Link>
+            </div>
+            <div className="column is-12">
               <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>
               <BlogRoll />
               <div className="column is-12 has-text-centered">
