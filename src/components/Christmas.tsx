@@ -11,7 +11,9 @@ const ChristmasPanel: React.SFC<{ flyerSrc: string }> = ({ flyerSrc }) => (
       <span className="icon right"><i className="fas fa-3x fa-air-freshener"></i></span>
     </h3>
     <article className="tile is-child box notification">
-      <img alt="BathTub Orchestra Christmas concert" src={flyerSrc} />
+      <div className="flyer-wrapper">
+        <img alt="BathTub Orchestra Christmas concert" src={flyerSrc} />
+      </div>
       <p>We're having a christmas concert featuring traditional carols, modern classics and a few surprises!</p>
       <p>BathTub Orchestra will be joined by special guests - Priordonnas - a ladies choir formed
         at Paragon school in Bath.</p>

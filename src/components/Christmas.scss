@@ -23,6 +23,11 @@ $christmasGreen: #659377;
   }
 
   article {
+    .flyer-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
     p {
       margin: 1em 0;
     }
