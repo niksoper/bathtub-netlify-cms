@@ -23,6 +23,45 @@ const ChristmasPanel: React.SFC<{ flyerSrc: string }> = ({ flyerSrc }) => (
             src="https://www.ticketsource.co.uk/images/bookNow/bookNow-black-small.png" />
       </ExternalLink>        
     </article>
+    
+    <div className="snowflakes" aria-hidden="true">
+      <div className="snowflake">
+      ❅
+      </div>
+      <div className="snowflake">
+      ❆
+      </div>
+      <div className="snowflake">
+      ❅
+      </div>
+      <div className="snowflake">
+      ❆
+      </div>
+      <div className="snowflake">
+      ❅
+      </div>
+      <div className="snowflake">
+      ❆
+      </div>
+      <div className="snowflake">
+        ❅
+      </div>
+      <div className="snowflake">
+        ❆
+      </div>
+      <div className="snowflake">
+        ❅
+      </div>
+      <div className="snowflake">
+        ❆
+      </div>
+      <div className="snowflake">
+        ❅
+      </div>
+      <div className="snowflake">
+        ❆
+      </div>
+    </div>
   </div>
 )
 
