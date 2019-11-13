@@ -5,10 +5,16 @@ import Img from 'gatsby-image'
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import { Jumbotron } from '../components/Jumbotron'
+import ChristmasPanel from '../components/Christmas'
+
 import { IndexPageTemplateQuery } from '../../types/graphql-types'
+import Helmet from 'react-helmet'
 
 export const IndexPageTemplate = ({ image, heading, description }: IndexPageTemplateQuery['markdownRemark']['frontmatter']) => (
   <div>
+    <Helmet>
+      <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    </Helmet>
     <Jumbotron>
       <img alt="BathTub Orchestra logo" src={image.childImageSharp.fluid.src} />
     </Jumbotron>
@@ -24,6 +30,7 @@ export const IndexPageTemplate = ({ image, heading, description }: IndexPageTemp
                 </div>
               </div>
             </div>
+            <ChristmasPanel />
             <div className="column is-12">
               <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>
               <BlogRoll />

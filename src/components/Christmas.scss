@@ -1,0 +1,35 @@
+@import './all';
+
+
+$christmasGreen: #659377;
+
+.christmas-panel {
+  .icon {
+    color: $christmasGreen;
+
+    &.left {
+      margin-right: 0.2em;
+    }
+
+    &.right {
+      margin-left: 0.2em;
+    }
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0 0.2em;
+  }
+
+  article {
+    .flyer-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    p {
+      margin: 1em 0;
+    }
+  }
+}
