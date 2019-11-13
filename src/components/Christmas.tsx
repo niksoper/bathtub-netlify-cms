@@ -2,6 +2,7 @@ import React from 'react'
 
 import './Christmas.scss'
 import { Link, StaticQuery, graphql } from 'gatsby'
+import { ExternalLink } from './ExternalLink'
 
 const ChristmasPanel: React.SFC<{ flyerSrc: string }> = ({ flyerSrc }) => (
   <div className="christmas-panel is-parent">
@@ -17,10 +18,10 @@ const ChristmasPanel: React.SFC<{ flyerSrc: string }> = ({ flyerSrc }) => (
       <p>We're having a christmas concert featuring traditional carols, modern classics and a few surprises!</p>
       <p>BathTub Orchestra will be joined by special guests - Priordonnas - a ladies choir formed
         at Paragon school in Bath.</p>
-      <a href="https://www.ticketsource.co.uk/bathtuborchestra">
+      <ExternalLink href="https://www.ticketsource.co.uk/bathtuborchestra">
         <img style={{border:0, width:130, height:56 }} alt="Book now"
-             src="https://www.ticketsource.co.uk/images/bookNow/bookNow-black-small.png" />
-      </a>
+            src="https://www.ticketsource.co.uk/images/bookNow/bookNow-black-small.png" />
+      </ExternalLink>        
     </article>
   </div>
 )
