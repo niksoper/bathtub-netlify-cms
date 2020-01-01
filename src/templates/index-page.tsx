@@ -1,11 +1,9 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
 
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import { Jumbotron } from '../components/Jumbotron'
-import ChristmasPanel from '../components/Christmas'
 
 import { IndexPageTemplateQuery } from '../../types/graphql-types'
 import Helmet from 'react-helmet'
@@ -30,7 +28,6 @@ export const IndexPageTemplate = ({ image, heading, description }: IndexPageTemp
                 </div>
               </div>
             </div>
-            <ChristmasPanel />
             <div className="column is-12">
               <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>
               <BlogRoll />
