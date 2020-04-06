@@ -13,6 +13,8 @@ Some might say ‘so what, rehearsals will start back up again at some point?’
 
 But music cannot be halted by anything, let alone a virus. Music always finds a way to continue. Deafness was not enough of a hurdle to stop Beethoven in his life long quest for musical perfection. Unlike Beethoven, we now have a wealth of technology at our fingertips to create and share music!
 
+![Multi track recording](/img/multitrack-recording-landscape.jpg 'Multi track recording')
+
 And so the Bathtub Orchestra has now embarked on a new, temporary chapter in its story. Each member is in the process of recording some of our repertoire in isolation, sending the tracks to me to arrange into a full scale studio recording! This is effectively a form of multi track recording, where each musician plays their part along to a backing track. The backing track plays through their headphones so the recording device only picks up the sound of their instruments.
 
 The process of doing this is in some ways more challenging than playing in a group, as you have to be perfectly in time! It also gives you an instant and somewhat disconcertingly detailed analysis of your playing and technique! The challenge is very real, but the progress you make as a musician is just as rewarding.
