@@ -22,3 +22,5 @@ This is effectively a form of multi track recording, where each musician plays t
 The process of doing this is in some ways more challenging than playing in a group, as you have to be perfectly in time! It also gives you an instant and somewhat disconcertingly detailed analysis of your playing and technique! The challenge is very real, but the progress you make as a musician is just as rewarding.
 
 We will then be working on a video performance of a new song, using simply a cameraphone to capture the individual performance for a much bigger video presentation. This will be a wonderful way to announce that the orchestra is still very much alive and working hard! When normality does resume, we will be ready to hit the ground running with some new repertoire. As the musical director, I cannot wait for that first rehearsal back and it will make all the hard work during these strange times even sweeter.
+
+Edward Bettella - Musical Director
