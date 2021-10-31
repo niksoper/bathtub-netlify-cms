@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Alice Park comeback gig
-date: 2021-10-31T16:16:00Z
+date: 2021-10-17T16:16:00Z
 description: ''
 tags:
   - news
