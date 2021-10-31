@@ -32,6 +32,9 @@ const Footer: React.SFC<{}> = () => (
             <ExternalLink title="twitter" href="https://twitter.com/BathTubOrchest1">
               <img src={twitter} alt="Twitter" style={{ width: '1em', height: '1em' }} />
             </ExternalLink>
+            <ExternalLink title="youtube" href="https://www.youtube.com/channel/UC_0Td4-g8BlaAJfwnEUjKtQ">
+              <img src={twitter} alt="YouTube" />
+            </ExternalLink>
           </div>
         </div>
         <div className="columns">
