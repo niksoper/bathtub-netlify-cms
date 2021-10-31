@@ -8,15 +8,17 @@ tags:
   - performance
 ---
 
+![Alice Park poster](/img/2021-oct-alice-park-poster-square.jpg 'Alice Park poster')
+
 It had been far too long, but on Sunday 17th October2021, after all of the disruption of the pandemic we finally made a return to live performing with a free concert in Alice Park.
 
-Watch a clip here:
+And here is a clip:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3adrZswkJUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-![Alice Park audience view](/img/2021-oct-alice-park-audience-view-far.jpg 'Alice Park audience view')
-
 We were a bit worried about getting rained off, but our friends at the Alice Park Cafe provided us with cover and the sun was shining like a warm spring day.
+
+![Alice Park audience view](/img/2021-oct-alice-park-audience-view-far.jpg 'Alice Park audience view')
 
 ![Rhythm section close up](/img/2021-oct-alice-park-rhythm-close-up.PNG 'Rhythm section close up')
 
