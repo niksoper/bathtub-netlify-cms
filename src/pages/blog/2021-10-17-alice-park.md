@@ -1,20 +1,24 @@
 ---
 templateKey: blog-post
-title: We are back
-date: 2021-10-31T16:00:00Z
-description: >-
-  It had been far too long, but on Sunday 17th October2021, after all of the disruption of the
-  pandemic we finally made a return to live performing with a free concert in Alice Park.
+title: Alice Park comeback gig
+date: 2021-10-31T16:16:00Z
+description: ''
 tags:
   - news
   - performance
 ---
 
+It had been far too long, but on Sunday 17th October2021, after all of the disruption of the pandemic we finally made a return to live performing with a free concert in Alice Park.
+
+Watch a clip here:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3adrZswkJUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ![Alice Park audience view](/img/2021-oct-alice-park-audience-view-far.jpg 'Alice Park audience view')
 
 We were a bit worried about getting rained off, but our friends at the Alice Park Cafe provided us with cover and the sun was shining like a warm spring day.
 
-![Rhythm section close up](/img/2021-oct-alice-park-audience-view-tree.jpg 'Rhythm section close up')
+![Rhythm section close up](/img/2021-oct-alice-park-rhythm-close-up.PNG 'Rhythm section close up')
 
 ![Alice Park audience view tree](/img/2021-oct-alice-park-audience-view-tree.jpg 'Alice Park audience view tree')
 
