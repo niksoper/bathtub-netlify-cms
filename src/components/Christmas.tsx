@@ -16,9 +16,7 @@ const ChristmasPanel: React.SFC<{ flyerSrc: string }> = ({ flyerSrc }) => (
         <img alt="BathTub Orchestra Christmas concert" src={flyerSrc} />
       </div>
       <p>We're having a christmas concert featuring traditional carols, modern classics and a few surprises!</p>
-      <p>BathTub Orchestra will be joined by special guests - Priordonnas - a ladies choir formed
-        at Paragon school in Bath.</p>
-      <ExternalLink href="https://www.ticketsource.co.uk/bathtuborchestra">
+      <ExternalLink href="https://www.ticketsource.co.uk/bathtuborchestra/bathtub-orchestra-christmas-concert-2021/2021-12-03/20:00/t-epqvky">
         <img style={{border:0, width:130, height:56 }} alt="Book now"
             src="https://www.ticketsource.co.uk/images/bookNow/bookNow-black-small.png" />
       </ExternalLink>        
