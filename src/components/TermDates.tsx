@@ -18,7 +18,7 @@ const TermDates: React.SFC<Props> = ({ termName, months }) => (
     <div className="container">
       <div className="content term-dates">
         <h1>{`Term Dates: ${termName}`}</h1>
-        <ul>
+        <ul className="box notification">
           {months.map(({ month, rehearsals, breaks }) => {
             const monthRehearsals = `${rehearsals.join(', ')}`
             const monthBreaks = breaks ? ` (break on ${breaks.join(', ')})` : ''
