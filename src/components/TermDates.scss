@@ -1,0 +1,13 @@
+@import './all';
+
+.term-dates {
+  ul {
+    margin-left: 10px;
+    list-style: none;
+    font-size: 1.5rem;
+
+    .term-month {
+      font-weight: 600;
+    }
+  }
+}
