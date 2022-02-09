@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'BathTub Orchestra',
-    description: "BathTub Orchestra - Bath's newest community orchestra",
+    description: 'BathTub Orchestra - A friendly community orchestra in Bath',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
