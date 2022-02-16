@@ -4,10 +4,10 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import { Jumbotron } from '../components/Jumbotron'
-import Concert from '../components/Concert'
 
 import { IndexPageTemplateQuery } from '../../types/graphql-types'
 import Helmet from 'react-helmet'
+import NextConcert from '../components/NextConcert'
 
 export const IndexPageTemplate = ({
   image,
@@ -35,12 +35,7 @@ export const IndexPageTemplate = ({
             </div>
             <div className="column is-12">
               <h3 className="has-text-weight-semibold is-size-2">Our next performance</h3>
-              <Concert
-                date="19th March 2022"
-                time="19:30"
-                location="St Swithin’s Church, The Paragon, Bath, BA1 5LY"
-                ticketUrl="https://www.ticketsource.co.uk/booking/t-rerydz"
-              />
+              <NextConcert />
             </div>
             <div className="column is-12">
               <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>

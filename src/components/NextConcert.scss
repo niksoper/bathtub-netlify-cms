@@ -1,0 +1,19 @@
+@import './all';
+
+.next-concert-panel {
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0.2em;
+  }
+
+  article {
+    .flyer-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    p {
+      margin: 1em 0;
+    }
+  }
+}
