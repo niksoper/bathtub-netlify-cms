@@ -8,7 +8,7 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <section className="section">
-          <div className="container">
+          <div className="container content">
             <h1>Member information</h1>
             <CurrentTermDates />
             <PrivacyPolicyLink />
