@@ -17,7 +17,7 @@ const TermDates: React.SFC<Props> = ({ termName, months }) => (
   <section className="section">
     <div className="container">
       <div className="content term-dates">
-        <h1>{`Term Dates: ${termName}`}</h1>
+        <h2>{`Term Dates: ${termName}`}</h2>
         <ul className="box notification">
           {months.map(({ month, rehearsals, breaks }) => {
             const monthRehearsals = `${rehearsals.join(', ')}`
@@ -35,5 +35,26 @@ const TermDates: React.SFC<Props> = ({ termName, months }) => (
     </div>
   </section>
 )
+
+export const CurrentTermDates = () => {
+  const termName = 'Spring 2022'
+  const months: TermMonth[] = [
+    {
+      month: 'January',
+      rehearsals: [11, 18, 25],
+    },
+    {
+      month: 'February',
+      rehearsals: [1, 8, 15],
+      breaks: [22],
+    },
+    {
+      month: 'March',
+      rehearsals: [1, 8, 15, 22, 29],
+    },
+  ]
+
+  return <TermDates termName={termName} months={months} />
+}
 
 export default TermDates
