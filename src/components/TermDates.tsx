@@ -14,26 +14,22 @@ interface Props {
 }
 
 const TermDates: React.SFC<Props> = ({ termName, months }) => (
-  <section className="section">
-    <div className="container">
-      <div className="content term-dates">
-        <h2>{`Term Dates: ${termName}`}</h2>
-        <ul className="box notification">
-          {months.map(({ month, rehearsals, breaks }) => {
-            const monthRehearsals = `${rehearsals.join(', ')}`
-            const monthBreaks = breaks ? ` (break on ${breaks.join(', ')})` : ''
+  <div className="content term-dates-wrapper">
+    <h2>{`Term Dates: ${termName}`}</h2>
+    <ul className="box notification term-dates">
+      {months.map(({ month, rehearsals, breaks }) => {
+        const monthRehearsals = `${rehearsals.join(', ')}`
+        const monthBreaks = breaks ? ` (break on ${breaks.join(', ')})` : ''
 
-            return (
-              <li>
-                <span className="term-month">{`${month}: `}</span>
-                {`${monthRehearsals}${monthBreaks}`}
-              </li>
-            )
-          })}
-        </ul>
-      </div>
-    </div>
-  </section>
+        return (
+          <li>
+            <span className="term-month">{`${month}: `}</span>
+            {`${monthRehearsals}${monthBreaks}`}
+          </li>
+        )
+      })}
+    </ul>
+  </div>
 )
 
 export const CurrentTermDates = () => {

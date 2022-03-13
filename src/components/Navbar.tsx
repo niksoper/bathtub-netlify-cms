@@ -49,7 +49,7 @@ const Navbar = class extends React.Component {
                 Contact
               </Link>
               <Link className="navbar-item" to="/members">
-                Members info
+                Member info
               </Link>
             </div>
           </div>
