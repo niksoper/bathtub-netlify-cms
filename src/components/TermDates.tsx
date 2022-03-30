@@ -33,6 +33,30 @@ const TermDates: React.SFC<Props> = ({ termName, months }) => (
 )
 
 export const CurrentTermDates = () => {
+  const termName = 'Summer 2022'
+  const months: TermMonth[] = [
+    {
+      month: 'April',
+      rehearsals: [26],
+    },
+    {
+      month: 'May',
+      rehearsals: [3, 10, 17, 24, 31],
+    },
+    {
+      month: 'June',
+      rehearsals: [7, 14, 21, 28],
+    },
+    {
+      month: 'July',
+      rehearsals: [5],
+    },
+  ]
+
+  return <TermDates termName={termName} months={months} />
+}
+
+export const Spring2022TermDates = () => {
   const termName = 'Spring 2022'
   const months: TermMonth[] = [
     {
@@ -48,6 +72,10 @@ export const CurrentTermDates = () => {
       month: 'March',
       rehearsals: [1, 8, 15, 22, 29],
     },
+    {
+      month: 'April',
+      rehearsals: [5],
+    }
   ]
 
   return <TermDates termName={termName} months={months} />
