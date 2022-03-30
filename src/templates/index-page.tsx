@@ -34,6 +34,10 @@ export const IndexPageTemplate = ({
               </div>
             </div>
             <div className="column is-12">
+              <h3 className="has-text-weight-semibold is-size-2">Our next performance</h3>
+              <p style={{ fontSize: '1.5em' }}>We'll be playing at the Larkhall Festival in Bath on 1st May so come along!</p>
+            </div>
+            <div className="column is-12">
               <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>
               <BlogRoll />
               <div className="column is-12 has-text-centered">
