@@ -44,7 +44,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        flyer: file(relativePath: { glob: "*2022-mar*" }) {
+        flyer: file(relativePath: { glob: "*2022-jun*" }) {
           childImageSharp {
             fluid(maxWidth: 721, quality: 100) {
               src
@@ -56,11 +56,11 @@ export default () => (
     render={data => (
       <NextConcert
         flyerSrc={data.flyer.childImageSharp.fluid.src}
-        date="19th March 2022"
-        time="19:30"
-        location="St Swithin's Church, The Paragon, Bath, BA1 5LY"
-        ticketUrl="https://www.ticketsource.co.uk/booking/t-rerydz"
-        description="Join us for an entertaining evening of live music featuring familiar tunes from the worlds of pop, rock and film. We'll also be joined by the Afternoon Rocks Choir from Corsham."
+        date="11th June 2022"
+        time="19:00"
+        location="Burdall's Yard, 7A Angelo Terrace, Bath BA1 5NH"
+        ticketUrl="https://www.ticketsource.co.uk/bathtuborchestra/e-amqoae"
+        description="We're excited to be returning to the Bath Fringe Festival to fill the vaulted ceilings of Burdall's Yard with our unique sound for the first time. We'll also be joined again by our friends in the Afternoon Rocks Choir from Corsham."
       />
     )}
   />
