@@ -8,6 +8,7 @@ import { Jumbotron } from '../components/Jumbotron'
 import { IndexPageTemplateQuery } from '../../types/graphql-types'
 import Helmet from 'react-helmet'
 import NextConcert from '../components/NextConcert'
+import { ExternalLink } from '../components/ExternalLink'
 
 export const IndexPageTemplate = ({
   image,
@@ -35,7 +36,8 @@ export const IndexPageTemplate = ({
             </div>
             <div className="column is-12">
               <h3 className="has-text-weight-semibold is-size-2">Our next performance</h3>
-              <p style={{ fontSize: '1.5em' }}>We'll be playing at the Larkhall Festival in Bath on 1st May so come along!</p>
+              <p style={{ fontSize: '1.5em' }}>We'll be part of the procession at Bath Carnival on Saturday 9th July. It will be a new experience for the orchestra so we're expecting some chaos but a lot of fun, so look out for us roaming the streets of Bath between 15:00 and 17:30.</p>
+              <p style={{ fontSize: '1.5em', marginTop: '1em' }}>See <ExternalLink href="https://www.bathcarnival.co.uk/">bathcarnival.co.uk</ExternalLink> for more information.</p>
             </div>
             <div className="column is-12">
               <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>
