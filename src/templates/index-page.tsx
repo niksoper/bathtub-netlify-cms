@@ -57,9 +57,12 @@ export const IndexPageTemplate = ({
                   </div>
                 </div>
               </div>
-              <div className="column is-12">
-                <ConcertDates concerts={concerts} />
-              </div>
+              {concerts.length === 0 ? null :
+                <div className="column is-12">
+                  <h3 className="has-text-weight-semibold is-size-2">Upcoming concerts</h3>
+                  <ConcertDates concerts={concerts} />
+                </div>
+              }
               <div className="column is-12">
                 <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>
                 <BlogRoll />
