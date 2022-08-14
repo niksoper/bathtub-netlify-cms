@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
-import Concert from '../../components/Concert';
+import { FeaturedConcert } from '../../components/Concert';
 
 export default class Index extends React.Component {
   render() {
@@ -10,7 +10,7 @@ export default class Index extends React.Component {
           <div className="container">
             <div className="content">
               <h1>Tickets</h1>
-              <Concert
+              <FeaturedConcert
                 name="Christmas concert with Priordonnas"
                 location="Salvation Army, Green Park Road, Bath BA1 1XE"
                 date="4th Dec 2019"

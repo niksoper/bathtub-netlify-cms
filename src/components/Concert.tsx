@@ -1,17 +1,18 @@
 import React from 'react'
+import moment from 'moment'
 import { ExternalLink } from './ExternalLink'
 
 import './Concert.scss'
 
-interface ConcertProps {
+export interface ConcertProps {
   location: string
-  date: string
+  date: moment.Moment
   description?: string
   time?: string
   ticketUrl?: string
 }
 
-const Concert: React.SFC<ConcertProps> = ({ location, description, date, time, ticketUrl }) => {
+export const FeaturedConcert: React.FunctionComponent<ConcertProps> = ({ location, description, date, time, ticketUrl }) => {
   const title = 'Book now'
   return (
     <div className="concert">
@@ -31,4 +32,25 @@ const Concert: React.SFC<ConcertProps> = ({ location, description, date, time, t
   )
 }
 
-export default Concert
+export interface ConcertDatesProps {
+  concerts: ConcertProps[]
+}
+
+const ConcertDate: React.FunctionComponent<{ concert: ConcertProps}> = ({ concert: { date, location } }) => {
+  const description = `${date.format('dddd Do MMM')}: ${location}`
+  return (
+    <div className="concert-date">
+      {description}
+    </div>
+  )
+}
+
+export const ConcertDates: React.FunctionComponent<ConcertDatesProps> = ({ concerts }) => {
+  return (
+    <div className="concert-dates">
+      <ul>
+        {concerts.map(c => <ConcertDate concert={c} />)}
+      </ul>
+    </div>
+  )
+}

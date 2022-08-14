@@ -8,56 +8,74 @@ import { Jumbotron } from '../components/Jumbotron'
 
 import { IndexPageTemplateQuery } from '../../types/graphql-types'
 import Helmet from 'react-helmet'
-import NextConcert from '../components/NextConcert'
-import { ExternalLink } from '../components/ExternalLink'
-import { TimedContent } from '../components/TimedContent'
+import { ConcertDates, ConcertProps } from '../components/Concert'
+import { isNotAfterToday } from '../components/TimedContent'
 
 export const IndexPageTemplate = ({
   image,
   heading,
   description,
-}: IndexPageTemplateQuery['markdownRemark']['frontmatter']) => (
-  <div>
-    <Helmet>
-      <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" />
-    </Helmet>
-    <Jumbotron>
-      <img alt="BathTub Orchestra logo" src={image.childImageSharp.fluid.src} />
-    </Jumbotron>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="content">
-              <div className="columns">
-                <div className="column is-12">
-                  <h3 className="has-text-centered has-text-weight-semibold is-size-2">{heading}</h3>
-                  <p>{description}</p>
+}: IndexPageTemplateQuery['markdownRemark']['frontmatter']) => {
+
+  const concerts = React.useMemo<ConcertProps[]>(() => {
+    const concertsData: ConcertProps[] = [
+      {
+        date: moment('2022-09-24'),
+        location: 'Great Bath Feast',
+      },
+      {
+        date: moment('2022-11-26'),
+        location: 'Westonbirt Arboretum',
+      },
+      {
+        date: moment('2022-12-10'),
+        location: 'Larkhall',
+        description: 'Christmas concert',
+      },
+    ]
+
+    return concertsData.filter(concert => isNotAfterToday(concert.date)).sort((a, b) => a.date.valueOf() - b.date.valueOf())
+  }, [])
+
+  return (
+    <div>
+      <Helmet>
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" />
+      </Helmet>
+      <Jumbotron>
+        <img alt="BathTub Orchestra logo" src={image.childImageSharp.fluid.src} />
+      </Jumbotron>
+      <section className="section section--gradient">
+        <div className="container">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <div className="content">
+                <div className="columns">
+                  <div className="column is-12">
+                    <h3 className="has-text-centered has-text-weight-semibold is-size-2">{heading}</h3>
+                    <p>{description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <TimedContent hideAfter={moment('2022-07-09')}>
               <div className="column is-12">
-                <h3 className="has-text-weight-semibold is-size-2">Our next performance</h3>
-                <p style={{ fontSize: '1.5em' }}>We'll be part of the procession at Bath Carnival on Saturday 9th July. It will be a new experience for the orchestra so we're expecting some chaos but a lot of fun, so look out for us roaming the streets of Bath between 15:00 and 17:30.</p>
-                <p style={{ fontSize: '1.5em', marginTop: '1em' }}>See <ExternalLink href="https://www.bathcarnival.co.uk/">bathcarnival.co.uk</ExternalLink> for more information.</p>
+                <ConcertDates concerts={concerts} />
               </div>
-            </TimedContent>
-            <div className="column is-12">
-              <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>
-              <BlogRoll />
-              <div className="column is-12 has-text-centered">
-                <Link className="btn" to="/blog">
-                  Read more
-                </Link>
+              <div className="column is-12">
+                <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>
+                <BlogRoll />
+                <div className="column is-12 has-text-centered">
+                  <Link className="btn" to="/blog">
+                    Read more
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
-)
+      </section>
+    </div>
+  )
+  }
 
 interface IndexPageProps {
   data: IndexPageTemplateQuery
