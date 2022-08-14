@@ -38,15 +38,9 @@ export interface ConcertDatesProps {
 
 const ConcertDate: React.FunctionComponent<{ concert: ConcertProps}> = ({ concert: { date, location } }) => {
   return (
-    <div className="container concert-date">
-      <div className="columns">
-        <div className="column is-6">
-          <div className="date">{date.format('dddd Do MMM')}</div>
-        </div>
-        <div className="column is-6">
-          <div className="location">{location}</div>
-        </div>
-      </div>
+    <div className="concert-date">
+      <div className="date">{date.format('dddd Do MMM')}</div>
+      <div className="location">{location}</div>
     </div>
   )
 }
