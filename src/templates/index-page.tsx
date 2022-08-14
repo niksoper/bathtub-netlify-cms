@@ -20,6 +20,10 @@ export const IndexPageTemplate = ({
   const concerts = React.useMemo<ConcertProps[]>(() => {
     const concertsData: ConcertProps[] = [
       {
+        date: moment('2022-07-09'),
+        location: 'Bath Carnival',
+      },
+      {
         date: moment('2022-09-24'),
         location: 'Great Bath Feast',
       },
