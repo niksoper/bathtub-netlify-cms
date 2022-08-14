@@ -49,7 +49,7 @@ export const ConcertDates: React.FunctionComponent<ConcertDatesProps> = ({ conce
   return (
     <div className="concert-dates">
       <ul>
-        {concerts.map(c => <ConcertDate concert={c} />)}
+        <li>{concerts.map(c => <ConcertDate concert={c} />)}</li>
       </ul>
     </div>
   )

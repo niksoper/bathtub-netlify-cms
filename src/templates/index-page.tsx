@@ -9,7 +9,7 @@ import { Jumbotron } from '../components/Jumbotron'
 import { IndexPageTemplateQuery } from '../../types/graphql-types'
 import Helmet from 'react-helmet'
 import { ConcertDates, ConcertProps } from '../components/Concert'
-import { isNotAfterToday } from '../components/TimedContent'
+import { isAfterToday } from '../components/TimedContent'
 
 export const IndexPageTemplate = ({
   image,
@@ -34,7 +34,7 @@ export const IndexPageTemplate = ({
       },
     ]
 
-    return concertsData.filter(concert => isNotAfterToday(concert.date)).sort((a, b) => a.date.valueOf() - b.date.valueOf())
+    return concertsData.filter(concert => !isAfterToday(concert.date)).sort((a, b) => a.date.valueOf() - b.date.valueOf())
   }, [])
 
   return (
