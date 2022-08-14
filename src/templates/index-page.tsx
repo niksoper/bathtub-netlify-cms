@@ -32,6 +32,11 @@ export const IndexPageTemplate = ({
         location: 'Larkhall',
         description: 'Christmas concert',
       },
+      {
+        date: moment('2023-03-25'),
+        location: 'Christchurch, Bath',
+        description: 'In collaboration with Ramshackle Orchestra!',
+      }
     ]
 
     return concertsData.filter(concert => !isAfterToday(concert.date)).sort((a, b) => a.date.valueOf() - b.date.valueOf())

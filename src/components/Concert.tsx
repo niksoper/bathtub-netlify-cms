@@ -36,11 +36,12 @@ export interface ConcertDatesProps {
   concerts: ConcertProps[]
 }
 
-const ConcertDate: React.FunctionComponent<{ concert: ConcertProps}> = ({ concert: { date, location } }) => {
+const ConcertDate: React.FunctionComponent<{ concert: ConcertProps}> = ({ concert: { date, location, description } }) => {
   return (
     <div className="concert-date">
       <div className="date">{date.format('dddd Do MMM')}</div>
       <div className="location">{location}</div>
+      {description ? <div className="description">{description}</div> : null}
     </div>
   )
 }
