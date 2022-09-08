@@ -9,7 +9,8 @@ import { Jumbotron } from '../components/Jumbotron'
 import { IndexPageTemplateQuery } from '../../types/graphql-types'
 import Helmet from 'react-helmet'
 import { ConcertDates, ConcertProps } from '../components/Concert'
-import { isAfterToday } from '../components/TimedContent'
+import { isAfterToday, TimedContent } from '../components/TimedContent'
+import NextConcert from '../components/NextConcert'
 
 export const IndexPageTemplate = ({
   image,
@@ -66,6 +67,12 @@ export const IndexPageTemplate = ({
                   </div>
                 </div>
               </div>
+              <TimedContent hideAfter={moment('2022-09-24')}>
+                <div className="column is-12">
+                  <h3 className="has-text-weight-semibold is-size-2">Our next performance</h3>
+                  <NextConcert />
+                </div>
+              </TimedContent>
               {concerts.length === 0 ? null :
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">Upcoming concerts</h3>

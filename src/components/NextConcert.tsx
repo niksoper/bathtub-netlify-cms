@@ -44,7 +44,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        flyer: file(relativePath: { glob: "*2022-mar*" }) {
+        flyer: file(relativePath: { glob: "bath-feast.png" }) {
           childImageSharp {
             fluid(maxWidth: 721, quality: 100) {
               src
@@ -56,11 +56,10 @@ export default () => (
     render={data => (
       <NextConcert
         flyerSrc={data.flyer.childImageSharp.fluid.src}
-        date="19th March 2022"
-        time="19:30"
-        location="St Swithin's Church, The Paragon, Bath, BA1 5LY"
-        ticketUrl="https://www.ticketsource.co.uk/booking/t-rerydz"
-        description="Join us for an entertaining evening of live music featuring familiar tunes from the worlds of pop, rock and film. We'll also be joined by the Afternoon Rocks Choir from Corsham."
+        date="24th September 2022"
+        time="10:30 AM"
+        location="Milsom Street, Bath"
+        description="We'll be playing for an hour - come along to hear some familiar tunes like you've never heard them before!"
       />
     )}
   />
