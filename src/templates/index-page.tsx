@@ -8,7 +8,7 @@ import { Jumbotron } from '../components/Jumbotron'
 
 import { IndexPageTemplateQuery } from '../../types/graphql-types'
 import Helmet from 'react-helmet'
-import { ConcertDates, ConcertProps } from '../components/Concert'
+import { ConcertDates, ConcertProps, getConcertDate } from '../components/Concert'
 import { isAfterToday, TimedContent } from '../components/TimedContent'
 import NextConcert from '../components/NextConcert'
 
@@ -26,11 +26,19 @@ export const IndexPageTemplate = ({
       },
       {
         date: moment('2022-09-24'),
+        time: moment('2022-09-24T10:30'),
         location: 'Great Bath Feast',
+        description: 'Milsom Street',
       },
       {
         date: moment('2022-11-26'),
         location: 'Westonbirt Arboretum',
+      },
+      {
+        date: moment('2022-11-29'),
+        time: moment('2022-11-29T18:00'),
+        location: 'Bath Christmas Market',
+        description: 'New Bond Street',
       },
       {
         date: moment('2022-12-10'),
@@ -44,7 +52,9 @@ export const IndexPageTemplate = ({
       }
     ]
 
-    return concertsData.filter(concert => !isAfterToday(concert.date)).sort((a, b) => a.date.valueOf() - b.date.valueOf())
+    return concertsData
+      .filter(concert => !isAfterToday(getConcertDate(concert)))
+      .sort((a, b) => getConcertDate(a).valueOf() - getConcertDate(b).valueOf())
   }, [])
 
   return (

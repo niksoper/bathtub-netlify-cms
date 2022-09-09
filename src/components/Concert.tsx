@@ -7,9 +7,13 @@ import './Concert.scss'
 export interface ConcertProps {
   location: string
   date: moment.Moment
+  time?: moment.Moment
   description?: string
-  time?: string
   ticketUrl?: string
+}
+
+export function getConcertDate(concert: ConcertProps): moment.Moment {
+  return concert.date
 }
 
 export const FeaturedConcert: React.FunctionComponent<ConcertProps> = ({ location, description, date, time, ticketUrl }) => {
@@ -36,12 +40,14 @@ export interface ConcertDatesProps {
   concerts: ConcertProps[]
 }
 
-const ConcertDate: React.FunctionComponent<{ concert: ConcertProps}> = ({ concert: { date, location, description } }) => {
+const ConcertDate: React.FunctionComponent<{ concert: ConcertProps}> = ({ concert: { date, time, location, description } }) => {
+  const fullDescription = React.useMemo(() => time ? `${time.format('h:mma')} - ${description}` : description, [description, time])
+
   return (
     <div className="concert-date">
       <div className="date">{date.format('dddd Do MMM')}</div>
       <div className="location">{location}</div>
-      {description ? <div className="description">{description}</div> : null}
+      {description ? <div className="description">{fullDescription}</div> : null}
     </div>
   )
 }
