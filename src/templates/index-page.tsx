@@ -31,6 +31,12 @@ export const IndexPageTemplate = ({
         description: 'Milsom Street',
       },
       {
+        date: moment('2022-10-30'),
+        time: moment('2022-10-30T14:00'),
+        location: 'Bath Canal',
+        description: 'Opposite the cafe where Pulteney Gardens crosses the canal',
+      },
+      {
         date: moment('2022-11-26'),
         location: 'Westonbirt Arboretum',
       },
