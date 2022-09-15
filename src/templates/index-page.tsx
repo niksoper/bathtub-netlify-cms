@@ -33,7 +33,7 @@ export const IndexPageTemplate = ({
       {
         date: moment('2022-10-30'),
         time: moment('2022-10-30T14:00'),
-        location: 'Bath Canal',
+        location: 'Pump Shed Cafe, Bath Canal',
         description: 'Opposite the cafe where Pulteney Gardens crosses the canal',
       },
       {
