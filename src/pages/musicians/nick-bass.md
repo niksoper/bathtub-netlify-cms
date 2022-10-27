@@ -2,7 +2,7 @@
 templateKey: 'musician'
 name: 'Nick'
 instrument: bass guitar
-image: /img/musician-nick.png
+image: /img/musician-nick.jpg
 ---
 Before I joined BathTub I was a bedroom guitarist for many years. I didn't have much experience playing in a group and had only played to an audience once in my life!
 

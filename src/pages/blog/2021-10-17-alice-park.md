@@ -20,7 +20,7 @@ We were a bit worried about getting rained off, but our friends at the Alice Par
 
 ![Alice Park audience view](/img/2021-oct-alice-park-audience-view-far.jpg 'Alice Park audience view')
 
-![Rhythm section close up](/img/2021-oct-alice-park-rhythm-close-up.PNG 'Rhythm section close up')
+![Rhythm section close up](/img/2021-oct-alice-park-rhythm-close-up.jpg 'Rhythm section close up')
 
 ![Alice Park audience view tree](/img/2021-oct-alice-park-audience-view-tree.jpg 'Alice Park audience view tree')
 
