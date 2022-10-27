@@ -8,8 +8,9 @@ import { Jumbotron } from '../components/Jumbotron'
 
 import { IndexPageTemplateQuery } from '../../types/graphql-types'
 import Helmet from 'react-helmet'
-import { ConcertDates, ConcertProps } from '../components/Concert'
-import { isAfterToday } from '../components/TimedContent'
+import { ConcertDates, ConcertProps, getConcertDate } from '../components/Concert'
+import { isAfterToday, TimedContent } from '../components/TimedContent'
+import NextConcert from '../components/NextConcert'
 
 export const IndexPageTemplate = ({
   image,
@@ -25,11 +26,25 @@ export const IndexPageTemplate = ({
       },
       {
         date: moment('2022-09-24'),
+        time: moment('2022-09-24T10:30'),
         location: 'Great Bath Feast',
+        description: 'Milsom Street',
+      },
+      {
+        date: moment('2022-10-30'),
+        time: moment('2022-10-30T14:00'),
+        location: 'Pump Shed Cafe, Bath Canal',
+        description: 'Opposite the cafe where Pulteney Gardens crosses the canal',
       },
       {
         date: moment('2022-11-26'),
         location: 'Westonbirt Arboretum',
+      },
+      {
+        date: moment('2022-11-29'),
+        time: moment('2022-11-29T18:00'),
+        location: 'Bath Christmas Market',
+        description: 'New Bond Street',
       },
       {
         date: moment('2022-12-10'),
@@ -43,7 +58,9 @@ export const IndexPageTemplate = ({
       }
     ]
 
-    return concertsData.filter(concert => !isAfterToday(concert.date)).sort((a, b) => a.date.valueOf() - b.date.valueOf())
+    return concertsData
+      .filter(concert => !isAfterToday(getConcertDate(concert)))
+      .sort((a, b) => getConcertDate(a).valueOf() - getConcertDate(b).valueOf())
   }, [])
 
   return (
@@ -66,6 +83,12 @@ export const IndexPageTemplate = ({
                   </div>
                 </div>
               </div>
+              <TimedContent hideAfter={moment('2022-09-24')}>
+                <div className="column is-12">
+                  <h3 className="has-text-weight-semibold is-size-2">Our next performance</h3>
+                  <NextConcert />
+                </div>
+              </TimedContent>
               {concerts.length === 0 ? null :
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">Upcoming concerts</h3>
