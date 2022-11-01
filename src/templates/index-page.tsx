@@ -5,6 +5,7 @@ import moment from 'moment'
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 import { Jumbotron } from '../components/Jumbotron'
+import ChristmasPanel from '../components/Christmas'
 
 import { IndexPageTemplateQuery } from '../../types/graphql-types'
 import Helmet from 'react-helmet'
@@ -48,8 +49,9 @@ export const IndexPageTemplate = ({
       },
       {
         date: moment('2022-12-10'),
-        location: 'Larkhall',
-        description: 'Christmas concert',
+        time: moment('2022-12-10T19:00'),
+        description: 'Larkhall URC Church, Avondale Buildings, Bath BA1 6NO',
+        location: 'Christmas concert',
       },
       {
         date: moment('2023-03-25'),
@@ -95,6 +97,7 @@ export const IndexPageTemplate = ({
                   <ConcertDates concerts={concerts} />
                 </div>
               }
+              <ChristmasPanel />
               <div className="column is-12">
                 <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>
                 <BlogRoll />
