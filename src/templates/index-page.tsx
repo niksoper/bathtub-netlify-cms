@@ -22,42 +22,22 @@ export const IndexPageTemplate = ({
   const concerts = React.useMemo<ConcertProps[]>(() => {
     const concertsData: ConcertProps[] = [
       {
-        date: moment('2022-07-09'),
-        location: 'Bath Carnival',
-      },
-      {
-        date: moment('2022-09-24'),
-        time: moment('2022-09-24T10:30'),
-        location: 'Great Bath Feast',
-        description: 'Milsom Street',
-      },
-      {
-        date: moment('2022-10-30'),
-        time: moment('2022-10-30T14:00'),
-        location: 'Pump Shed Cafe, Bath Canal',
-        description: 'Opposite the cafe where Pulteney Gardens crosses the canal',
-      },
-      {
-        date: moment('2022-11-26'),
-        location: 'Westonbirt Arboretum',
-      },
-      {
-        date: moment('2022-11-29'),
-        time: moment('2022-11-29T18:00'),
-        location: 'Bath Christmas Market',
-        description: 'New Bond Street',
-      },
-      {
-        date: moment('2022-12-10'),
-        time: moment('2022-12-10T19:00'),
-        description: 'Larkhall URC Church, Avondale Buildings, Bath BA1 6NO',
-        location: 'Christmas concert',
-      },
-      {
         date: moment('2023-03-25'),
         location: 'Christchurch, Bath',
         description: 'In collaboration with Ramshackle Orchestra!',
-      }
+      },
+      {
+        date: moment('2023-05-12'),
+        location: 'Bath Party in the City',
+      },
+      {
+        date: moment('2023-06-10'),
+        location: 'Bath Fringe Festival',
+      },
+      {
+        date: moment('2023-07-08'),
+        location: 'Bath Carnival',
+      },
     ]
 
     return concertsData
