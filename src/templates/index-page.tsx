@@ -97,7 +97,6 @@ export const IndexPageTemplate = ({
                   <ConcertDates concerts={concerts} />
                 </div>
               }
-              <ChristmasPanel />
               <div className="column is-12">
                 <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>
                 <BlogRoll />
