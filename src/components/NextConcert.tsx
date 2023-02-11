@@ -22,7 +22,7 @@ const NextConcert: React.SFC<ConcertProps> = ({ flyerSrc, date, time, location, 
         <p>{location}</p>
         <ExternalLink href={ticketUrl} title={ticketLinkTitle}>
           <div className="flyer-wrapper">
-            <img alt="BathTub Orchestra Christmas concert" src={flyerSrc} />
+            <img alt="Orchestra double header. Ramshackle Orchestra and BathTub Orchestra." src={flyerSrc} />
           </div>
         </ExternalLink>
         {!!description && <p>{description}</p>}
@@ -44,7 +44,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        flyer: file(relativePath: { glob: "bath-feast.png" }) {
+        flyer: file(relativePath: { glob: "concert-2023-mar-christchurch.png" }) {
           childImageSharp {
             fluid(maxWidth: 721, quality: 100) {
               src
@@ -56,10 +56,11 @@ export default () => (
     render={data => (
       <NextConcert
         flyerSrc={data.flyer.childImageSharp.fluid.src}
-        date="24th September 2022"
-        time="10:30 AM"
-        location="Milsom Street, Bath"
-        description="We'll be playing for an hour - come along to hear some familiar tunes like you've never heard them before!"
+        date="25th March 2023"
+        time="7:00 PM"
+        location="Christchurch, Julian Road, Bath BA1 2RH"
+        description="Two local community orchestras coming together for the first time!"
+        ticketUrl="https://www.ticketsource.co.uk/bathtuborchestra"
       />
     )}
   />

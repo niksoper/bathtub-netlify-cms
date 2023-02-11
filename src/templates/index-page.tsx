@@ -22,11 +22,6 @@ export const IndexPageTemplate = ({
   const concerts = React.useMemo<ConcertProps[]>(() => {
     const concertsData: ConcertProps[] = [
       {
-        date: moment('2023-03-25'),
-        location: 'Christchurch, Bath',
-        description: 'In collaboration with Ramshackle Orchestra!',
-      },
-      {
         date: moment('2023-05-12'),
         location: 'Bath Party in the City',
       },
@@ -65,7 +60,7 @@ export const IndexPageTemplate = ({
                   </div>
                 </div>
               </div>
-              <TimedContent hideAfter={moment('2022-09-24')}>
+              <TimedContent hideAfter={moment('2023-03-25')}>
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">Our next performance</h3>
                   <NextConcert />
